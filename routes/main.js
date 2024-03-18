@@ -5,6 +5,8 @@ const mainController = require('../controllers/mainController');
 
 router.get('/', mainController.list);
 router.get('/ciudad-jardin', mainController.cj);
+router.get('/granadillo', mainController.gr);
+
 
 // router.post('/add', mainController.save);
 // router.get('/info', mainController.info);
