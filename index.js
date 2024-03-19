@@ -5,7 +5,6 @@ const path = require('path');
 const app = express();
 
 //IMPORTING ROUTES
-console.log(__dirname)
 const mainRoutes = require('./routes/main')
 
 //SETTINGS
