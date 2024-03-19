@@ -1,35 +1,25 @@
+
 <%- include('partials/_header') %>
 
 <% data.forEach((propiedad,index) => {%>
-  <% console.log(propiedad.propiedad) %>
   <% if (propiedad.propiedad == '306A') { %>
+
 
 <div id="carouselExampleFade" class="carousel slide carousel-fade">
   <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="/306A/1.jpg" class="d-block w-100" alt="...">
+    <div id="slider-izquierdo" class="card-img-overlay" style="top: 80px;">
+      <button class="btn btn-light"> < </button>
     </div>
-    <div class="carousel-item">
-      <img src="/306A/2.jpg" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="/306A/3.jpg" class="d-block w-100" alt="...">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
 
-  <div >
-    <!-- <button><a href="/"><img class="w-25 card-img-overlay" src="icon-back.png"></a></button> -->
+    <div class="slider-screen">
+      <img name="Imagen" class="d-block w-100">
+    </div>
+    
+    <div id="slider-derecho" class="card-img-overlay" style="top: 80px; left: 360px;">
+      <button class="btn btn-light"> > </button>
+    </div>
   </div>
-  
+</div>
 
     <div class="model2 ml-4 mr-4 mt-2">
           <tr>  
@@ -48,7 +38,7 @@
                 <p>1 cama queen</p>
               </div>
               <div class="info-cama p-2">
-                <h6>Sala</h6>
+                <h6 class="fw-bold">Sala</h6>
                 <p>1 sofá cama</p>
               </div>
             </div>
@@ -66,8 +56,8 @@
               <li class='texto-amenid'>Almohadas y mantas</li>
               <li class='texto-amenid'>Plancha</li>
               <li class='texto-amenid'>Espacio para guardar ropa: Armario</li>
-            
-              <li class="fw-bold">Entretenimiento</li>
+              
+              <li class='titulo-amenidades'>Entretenimiento</li>
               <li class='texto-amenid'>Conexión Ethernet</li>
               <li class='texto-amenid'>Televisor de alta definición Smart TV</li>
               <li class='texto-amenid'>Gimnasio</li>
@@ -108,15 +98,7 @@
           <% } %>
           <% }); %>
         </div>
-        
-        <script>
-          const myCarouselElement = document.querySelector('carouselExampleFade')
-
-          const carousel = new bootstrap.Carousel(myCarouselElement, {
-            interval: 2000,
-            touch: true
-          })
-        </script>
+        <script src="slider.js"></script>
 
       </body>
       </html>

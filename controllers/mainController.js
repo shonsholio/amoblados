@@ -7,15 +7,13 @@ controller.list = (req,res) => {
 
 controller.cj = (req,res) => {
   const data = fs.readFileSync('./src/props.json', 'utf8');
-  // console.log(data)
   const info = JSON.parse(data);
-  console.log(info)
 
   info.forEach(element => {
   });
   res.render('ciudad-jardin', {
     data: info
-  });
+  }); 
 }
 
 controller.gr = (req,res) => {
